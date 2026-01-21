@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" width="200" height="160" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="g-head" x1="0" x2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#071033"/>
+    </linearGradient>
+    <linearGradient id="g-glow" x1="0" x2="1">
+      <stop offset="0" stop-color="#22c1ff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#7f5cff" stop-opacity="0.7"/>
+    </linearGradient>
+    <filter id="f-glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="f-soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <style>
+      .base{fill:url(#g-head); stroke:#0ea5e9; stroke-width:1.5;}
+      .panel{fill:#071033; stroke:#2dd4bf; stroke-width:0.8}
+      .neon{fill:url(#g-glow); filter:url(#f-glow); opacity:0.95}
+      .eye-iris{fill:#041024}
+      .eye-core{fill:#b7f5ff}
+      .detail{fill:#0ea5e9; opacity:0.9}
+    </style>
+  </defs>
+
+  <!-- Kopfkörper -->
+  <g transform="translate(0,0)">
+    <path class="base" d="M10 80 C10 35 50 10 110 18 C150 24 190 48 190 80 C190 112 150 136 110 142 C60 149 20 120 10 80 Z"/>
+    <!-- Hellere obere Platte -->
+    <path class="panel" d="M18 70 C30 40 70 22 110 28 C150 34 176 52 178 70 L18 70 Z" opacity="0.35"/>
+    <!-- Sci-Fi Hologram-Visor rechts (Verbindungskante bei x≈190 sauber) -->
+    <rect x="138" y="54" width="48" height="18" rx="6" class="neon" />
+    <rect x="142" y="58" width="40" height="10" rx="4" fill="#0b1220" opacity="0.35"/>
+
+    <!-- Auge (leicht eingelassen) -->
+    <g transform="translate(56,58)">
+      <ellipse cx="0" cy="0" rx="18" ry="12" fill="#e6f8ff" opacity="0.22" />
+      <circle class="eye-iris" cx="0" cy="0" r="9"/>
+      <circle class="eye-core" cx="2" cy="-1" r="3"/>
+      <circle cx="-6" cy="-2" r="2" fill="#22d3ee" opacity="0.6"/>
+    </g>
+
+    <!-- Technische Nähte / Details -->
+    <g stroke="#144e63" stroke-width="1" fill="none" opacity="0.6">
+      <path d="M28 98 Q60 118 108 124" stroke-linecap="round"/>
+      <path d="M32 68 Q68 50 112 44" stroke-linecap="round" stroke-opacity="0.6"/>
+    </g>
+
+    <!-- kleine Leuchtpunkte entlang Oberseite -->
+    <g fill="#7dd3fc" opacity="0.9">
+      <circle cx="40" cy="36" r="2"/>
+      <circle cx="66" cy="30" r="2"/>
+      <circle cx="92" cy="32" r="2.5"/>
+    </g>
+
+    <!-- Verbindungskante rechts: flache, saubere Kante bei x=200 -->
+    <rect x="190" y="0" width="10" height="160" fill="transparent"/>
+  </g>
+</svg>

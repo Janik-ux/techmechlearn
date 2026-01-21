@@ -1,0 +1,50 @@
+{
+  "level": [{
+    "levelNumber": 0,
+    "initFishs": [
+      { "x": 300, "y": 200, "rotation": 0, "length": 3 }
+    ],
+    "fishConditions": [
+      {
+        "xMin": 450,
+        "xMax": 10050,
+        "yMin": 150,
+        "yMax": 10050,
+        "rotationMin": -0.1,
+        "rotationMax": 0.1,
+        "lengthMin": 2.5,
+        "lengthMax": 3.5
+      }
+    ],
+    "maxText": 1,
+    "newtonText": {
+      "text-en": [
+        "Hi, I'm Newtonian",
+        "You can create fish by assembling body segments."
+      ]
+    }
+  },
+  {
+    "levelNumber": 1,
+    "initFishs": [],
+    "fishConditions": [
+      {
+        "xMin": 350,
+        "xMax": 10050,
+        "yMin": 450,
+        "yMax": 10050,
+        "rotationMin": 1.4,
+        "rotationMax": 1.7,
+        "lengthMin": 3.5,
+        "lengthMax": 4.5
+      }
+    ],
+    "maxText": 1,
+    "newtonText": {
+      "text-en": [
+        "That's the End! Gratulations!",
+        "Now do something that matters, not this stupid internet stuff"
+      ]
+    }
+  }]
+}

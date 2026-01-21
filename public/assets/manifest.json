@@ -1,0 +1,38 @@
+{
+    "bundles": [
+        {
+            "name": "fish",
+            "assets": [
+                {
+                    "alias": "head",
+                    "src":  "assets/fish-head.svg"
+                },
+                {
+                    "alias": "body",
+                    "src": "assets/fish-body.svg"
+                },
+                {
+                    "alias": "tail",
+                    "src": "assets/fish-tail.svg"
+                }
+            ]
+        },
+        {
+            "name": "newton",
+            "assets": [
+                {
+                    "alias": "body",
+                    "src": "assets/Newton.png"
+                },
+                {
+                    "alias": "bubble",
+                    "src": "assets/speech-bubble.png"
+                },
+                {
+                    "alias": "next",
+                    "src": "assets/next-button.jpeg"
+                }
+            ]
+        }
+    ]
+}
