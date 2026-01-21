@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 160" width="200" height="160" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="g-tail" x1="0" x2="1">
+      <stop offset="0" stop-color="#061427"/>
+      <stop offset="1" stop-color="#001426"/>
+    </linearGradient>
+    <linearGradient id="g-fin" x1="0" x2="1">
+      <stop offset="0" stop-color="#23d3ff" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#7f5cff" stop-opacity="0.75"/>
+    </linearGradient>
+    <filter id="f-fin-glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="4"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .tailBase{fill:url(#g-tail); stroke:#0ea5e9; stroke-width:1}
+      .fin{fill:url(#g-fin); stroke:#2dd4bf; stroke-width:0.8; filter:url(#f-fin-glow)}
+      .spine{fill:#071033; opacity:0.9}
+    </style>
+  </defs>
+
+  <g>
+    <!-- Körperende (linke saubere Kante bei x=0 passt zum body) -->
+    <rect x="0" y="28" width="64" height="104" rx="18" class="tailBase"/>
+    <!-- Schwanzflossen, futuristisch -->
+    <g transform="translate(64,80)">
+      <path class="fin" d="M0 0 C42 -32 84 -46 120 -50 C100 -10 54 -8 0 0 Z" transform="translate(0,-20) rotate(-6)"/>
+      <path class="fin" d="M0 0 C34 20 70 34 100 42 C80 6 44 2 0 0 Z" transform="translate(0,10) rotate(6)" opacity="0.95"/>
+      <!-- mittlere Verstärkung -->
+      <path d="M0 0 C34 -6 68 -2 100 6" fill="none" stroke="#0b2740" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+    </g>
+
+    <!-- kleine Rücklichter / Antriebsdetails -->
+    <g transform="translate(20,70)" opacity="0.95">
+      <rect x="0" y="0" width="8" height="20" rx="2" fill="#7dd3fc"/>
+      <rect x="0" y="28" width="8" height="20" rx="2" fill="#7f5cff" opacity="0.9"/>
+    </g>
+
+    <!-- linke Kante transparent für sauberes Andocken -->
+    <rect x="0" y="0" width="4" height="160" fill="transparent"/>
+  </g>
+</svg>
