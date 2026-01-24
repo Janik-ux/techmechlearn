@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/browserAll-mGvpVqtW.js","assets/webworkerAll-BYCf2Dnk.js","assets/colorToUniform-DoqTjtcD.js","assets/WebGPURenderer-JOPnU4yf.js","assets/SharedSystems-BbpbERNg.js","assets/WebGLRenderer-BnlEdS72.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/browserAll-C45QWVkL.js","assets/webworkerAll-UpINHdkK.js","assets/colorToUniform-BsQbBkLx.js","assets/WebGPURenderer-DCxT-Mdt.js","assets/SharedSystems-1h8p77GI.js","assets/WebGLRenderer-kbHuSkkn.js"])))=>i.map(i=>d[i]);
 var __defProp = Object.defineProperty;
 var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
 var __publicField = (obj, key, value) => __defNormalProp(obj, typeof key !== "symbol" ? key + "" : key, value);
@@ -387,7 +387,7 @@ const browserExt = {
   },
   test: () => true,
   load: async () => {
-    await __vitePreload(() => import("./browserAll-mGvpVqtW.js"), true ? __vite__mapDeps([0,1,2]) : void 0);
+    await __vitePreload(() => import("./browserAll-C45QWVkL.js"), true ? __vite__mapDeps([0,1,2]) : void 0);
   }
 };
 const webworkerExt = {
@@ -398,7 +398,7 @@ const webworkerExt = {
   },
   test: () => typeof self !== "undefined" && self.WorkerGlobalScope !== void 0,
   load: async () => {
-    await __vitePreload(() => import("./webworkerAll-BYCf2Dnk.js"), true ? __vite__mapDeps([1,2]) : void 0);
+    await __vitePreload(() => import("./webworkerAll-UpINHdkK.js"), true ? __vite__mapDeps([1,2]) : void 0);
   }
 };
 class ObservablePoint {
@@ -12517,7 +12517,7 @@ async function autoDetectRenderer(options) {
     const rendererType = preferredOrder[i2];
     if (rendererType === "webgpu" && await isWebGPUSupported()) {
       const { WebGPURenderer } = await __vitePreload(async () => {
-        const { WebGPURenderer: WebGPURenderer2 } = await import("./WebGPURenderer-JOPnU4yf.js");
+        const { WebGPURenderer: WebGPURenderer2 } = await import("./WebGPURenderer-DCxT-Mdt.js");
         return { WebGPURenderer: WebGPURenderer2 };
       }, true ? __vite__mapDeps([3,2,4]) : void 0);
       RendererClass = WebGPURenderer;
@@ -12527,7 +12527,7 @@ async function autoDetectRenderer(options) {
       options.failIfMajorPerformanceCaveat ?? AbstractRenderer.defaultOptions.failIfMajorPerformanceCaveat
     )) {
       const { WebGLRenderer } = await __vitePreload(async () => {
-        const { WebGLRenderer: WebGLRenderer2 } = await import("./WebGLRenderer-BnlEdS72.js");
+        const { WebGLRenderer: WebGLRenderer2 } = await import("./WebGLRenderer-kbHuSkkn.js");
         return { WebGLRenderer: WebGLRenderer2 };
       }, true ? __vite__mapDeps([5,2,4]) : void 0);
       RendererClass = WebGLRenderer;
@@ -25986,7 +25986,7 @@ let Fish = _Fish;
     resizeTo: window
   });
   document.getElementById("pixi-container").appendChild(app.canvas);
-  await Assets.init({ manifest: "/assets/manifest.json" });
+  await Assets.init({ manifest: "assets/manifest.json" });
   let textProgress = 0;
   let currentLevelData;
   function nextNewtonText() {
