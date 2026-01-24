@@ -380,7 +380,7 @@ class Fish {
   });
 
   document.getElementById("pixi-container")!.appendChild(app.canvas);
-  await Assets.init({ manifest: "/assets/manifest.json" });
+  await Assets.init({ manifest: "assets/manifest.json" });
 
   let textProgress = 0; // tracks every step in the storyline
   let currentLevelData: {
@@ -483,7 +483,8 @@ class Fish {
       wordWrapWidth: newtonBubble.width - 100,
       lineHeight: 25,
       dropShadow: true,
-      dropShadowColor: "#7c2abe", // "Space glow" effect
+      // "Space glow" effect
+      dropShadowColor: "#7c2abe",
       dropShadowBlur: 4,
     }),
   });
@@ -545,7 +546,7 @@ class Fish {
     console.log("Checking level completion...");
   }
 
-  function possibleLevelCompletion(): Boolean {
+  function possibleLevelCompletion(): boolean {
     for (const fishPositioning of currentLevelData.fishConditions) {
       let fishFound = false;
       for (const fish of Fish.instances) {
